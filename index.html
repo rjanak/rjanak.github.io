@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello there!</title>
+    <title>Rahul Janak</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <p>Working..</p>
+    <div>
+        <header>
+            Welcome to {{name}}'s Github Page
+        <nav>
+            <ul>
+              <li v-for="link in links">
+                <a href="/">{{link}}</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+          <main>
+            <div class="blog_wrapper">
+              <section id="blog">
+                <article v-for="post in posts">
+                  <h3>{{post.title}}</h3>
+                  <p>{{post.body}}</p>
+                </article>
+              </section>
+            </div>
+          </main>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
 </body>
 </html>
